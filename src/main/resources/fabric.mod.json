@@ -6,7 +6,7 @@
   "description": "Adds an in-game updater functionality to Mod Menu.",
   "authors": ["UDPSendToFailed"],
   "contact": {
-    "homepage": "",
+    "homepage": "https://modrinth.com/project/modmenu-updater",
     "sources": "https://github.com/UDPSendToFailed/ModMenuUpdater",
     "issues": "https://github.com/UDPSendToFailed/ModMenuUpdater/issues"
   },
