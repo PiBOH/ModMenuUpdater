@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "modmenu_updater",
+  "version": "1.0.0",
+  "name": "Mod Menu Updater",
+  "description": "Adds an in-game updater functionality to Mod Menu.",
+  "authors": ["UDPSendToFailed"],
+  "contact": {
+    "homepage": "",
+    "sources": "https://github.com/UDPSendToFailed/ModMenuUpdater",
+    "issues": "https://github.com/UDPSendToFailed/ModMenuUpdater/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/modmenu_updater/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.udpsendtofailed.modmenu.updater.ModMenuUpdater"
+    ]
+  },
+  "mixins": [
+    "modmenu_updater.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": ">=1.21.9-",
+    "java": ">=17",
+    "modmenu": "=16.0.0-rc.1"
+  }
+}
