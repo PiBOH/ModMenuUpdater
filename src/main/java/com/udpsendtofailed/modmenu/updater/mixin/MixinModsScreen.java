@@ -148,16 +148,28 @@ public abstract class MixinModsScreen extends Screen {
     @Inject(method = "render", at = @At(value = "INVOKE", target = "Lcom/terraformersmc/modmenu/gui/widget/ModListWidget;render(Lnet/minecraft/client/gui/DrawContext;IIF)V"))
     private void updateButtonState(CallbackInfo ci) {
         if (updateAllButton != null) {
-             boolean anyUpdates = ModMenu.MODS.values().stream().anyMatch(m -> 
-                m.hasUpdate() && !((ModExtension)m).isUpdateDownloaded() && !((ModExtension)m).isDownloadingUpdate() && m.getUpdateInfo() instanceof UpdateInfoExtension ext && ext.getDownloadUrl() != null
+            boolean anyUpdates = ModMenu.MODS.values().stream().anyMatch(m ->
+                m instanceof ModExtension ext
+                && m.hasUpdate()
+                && !ext.isUpdateDownloaded()
+                && !ext.isDownloadingUpdate()
+                && m.getUpdateInfo() instanceof UpdateInfoExtension uie
+                && uie.getDownloadUrl() != null
             );
             updateAllButton.active = anyUpdates;
         }
 
         if (selected != null) {
             Mod mod = selected.getMod();
-            ModExtension ext = (ModExtension) mod;
-            boolean hasUrl = mod.getUpdateInfo() instanceof UpdateInfoExtension uie && uie.getDownloadUrl() != null;
+
+            if (!(mod instanceof ModExtension ext)) {
+                if (updateButton != null) updateButton.visible = false;
+                return;
+            }
+
+            boolean hasUrl =
+                mod.getUpdateInfo() instanceof UpdateInfoExtension uie
+                && uie.getDownloadUrl() != null;
             
             if (updateButton != null) {
                 updateButton.visible = hasUrl || ext.isUpdateDownloaded();
