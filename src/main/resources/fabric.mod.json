@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "modmenu_updater",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "name": "Mod Menu Updater",
   "description": "Adds an in-game updater functionality to Mod Menu.",
   "authors": ["UDPSendToFailed"],
@@ -23,8 +23,8 @@
   ],
   "depends": {
     "fabricloader": ">=0.14.0",
-    "minecraft": ">=1.21.9-",
+    "minecraft": ">=1.21.11-",
     "java": ">=17",
-    "modmenu": "=17.0.0-beta.1"
+    "modmenu": "=17.0.0-beta.2"
   }
 }

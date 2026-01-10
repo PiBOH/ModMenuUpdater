@@ -29,7 +29,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     // 2. Use the EXACT version string
-    modImplementation "com.terraformersmc:modmenu:17.0.0-beta.1"
+    modImplementation "com.terraformersmc:modmenu:17.0.0-beta.2"
 }
 
 processResources {
