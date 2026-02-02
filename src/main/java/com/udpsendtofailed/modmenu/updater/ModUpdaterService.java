@@ -41,20 +41,21 @@ public class ModUpdaterService {
 
     public void performUpdateAll() {
         List<Mod> toUpdate = ModMenu.MODS.values().stream()
-            .filter(mod -> {
-                if (mod.getUpdateInfo() instanceof UpdateInfoExtension info && info.getDownloadUrl() != null) {
-                    return mod.hasUpdate() && !((ModExtension)mod).isDownloadingUpdate() && !((ModExtension)mod).isUpdateDownloaded();
-                }
-                return false;
-            })
-            .toList();
+                .filter(mod -> {
+                    if (mod.getUpdateInfo() instanceof UpdateInfoExtension info && info.getDownloadUrl() != null) {
+                        return mod.hasUpdate() && !((ModExtension) mod).isDownloadingUpdate()
+                                && !((ModExtension) mod).isUpdateDownloaded();
+                    }
+                    return false;
+                })
+                .toList();
 
-        if (toUpdate.isEmpty()) return;
+        if (toUpdate.isEmpty())
+            return;
 
         toastSuccess(
-            Text.translatable("modmenu.update.toast.all.started.title"), 
-            Text.translatable("modmenu.update.toast.all.started.description", toUpdate.size())
-        );
+                Text.translatable("modmenu.update.toast.all.started.title"),
+                Text.translatable("modmenu.update.toast.all.started.description", toUpdate.size()));
 
         for (Mod mod : toUpdate) {
             performUpdate(mod);
@@ -62,10 +63,12 @@ public class ModUpdaterService {
     }
 
     public void performUpdate(Mod mod) {
-        if (!(mod.getUpdateInfo() instanceof UpdateInfoExtension info) || info.getDownloadUrl() == null) return;
-        
+        if (!(mod.getUpdateInfo() instanceof UpdateInfoExtension info) || info.getDownloadUrl() == null)
+            return;
+
         ModExtension ext = (ModExtension) mod;
-        if (ext.isDownloadingUpdate() || ext.isUpdateDownloaded()) return;
+        if (ext.isDownloadingUpdate() || ext.isUpdateDownloaded())
+            return;
 
         Optional<Path> oldFile = findModJar(mod);
         if (oldFile.isEmpty()) {
@@ -88,16 +91,15 @@ public class ModUpdaterService {
 
                 Path newFilePath = modsDir.resolve(info.getFileName());
                 java.nio.file.Files.move(tempFile, newFilePath, StandardCopyOption.REPLACE_EXISTING);
-                
+
                 CleanupManager.scheduleForCleanup(oldFile.get());
-                
+
                 toastSuccess(
-                    Text.translatable("modmenu.update.toast.single.success.title"), 
-                    Text.translatable("modmenu.update.toast.single.success.description", mod.getName())
-                );
+                        Text.translatable("modmenu.update.toast.single.success.title"),
+                        Text.translatable("modmenu.update.toast.single.success.description", mod.getName()));
 
                 ext.setUpdateDownloaded(true);
-                
+
                 String parentId = mod.getParent();
                 if (parentId != null) {
                     Mod parentMod = ModMenu.MODS.get(parentId);
@@ -108,9 +110,8 @@ public class ModUpdaterService {
             } catch (Exception e) {
                 LOGGER.error("Update failed for " + mod.getName(), e);
                 toastError(
-                    Text.translatable("modmenu.update.toast.error.title"), 
-                    Text.literal(mod.getName() + ": " + e.getMessage())
-                );
+                        Text.translatable("modmenu.update.toast.error.title"),
+                        Text.literal(mod.getName() + ": " + e.getMessage()));
             } finally {
                 ext.setDownloadingUpdate(false);
             }
@@ -118,10 +119,16 @@ public class ModUpdaterService {
     }
 
     private Path downloadFile(String url) throws IOException, InterruptedException {
-        HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url)).GET().build();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(url))
+                .GET()
+                .header("Cache-Control", "no-cache")
+                .header("Pragma", "no-cache")
+                .build();
         Path tempFile = java.nio.file.Files.createTempFile("modmenu-updater", ".jar.tmp");
         HttpResponse<InputStream> response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofInputStream());
-        if (response.statusCode() != 200) throw new IOException("HTTP " + response.statusCode());
+        if (response.statusCode() != 200)
+            throw new IOException("HTTP " + response.statusCode());
         try (InputStream is = response.body()) {
             java.nio.file.Files.copy(is, tempFile, StandardCopyOption.REPLACE_EXISTING);
         }
@@ -130,23 +137,23 @@ public class ModUpdaterService {
 
     private Optional<Path> findModJar(Mod mod) {
         if (mod instanceof com.terraformersmc.modmenu.util.mod.fabric.FabricMod fabricMod) {
-             var container = fabricMod.getContainer();
-             if (container.getOrigin().getKind() == net.fabricmc.loader.api.metadata.ModOrigin.Kind.PATH) {
+            var container = fabricMod.getContainer();
+            if (container.getOrigin().getKind() == net.fabricmc.loader.api.metadata.ModOrigin.Kind.PATH) {
                 return container.getOrigin().getPaths().stream()
-                    .filter(p -> p.toString().toLowerCase().endsWith(".jar") && java.nio.file.Files.exists(p))
-                    .findFirst();
+                        .filter(p -> p.toString().toLowerCase().endsWith(".jar") && java.nio.file.Files.exists(p))
+                        .findFirst();
             }
         }
         return Optional.empty();
     }
 
     private void toastSuccess(Text title, Text description) {
-        MinecraftClient.getInstance().execute(() -> 
-            SystemToast.add(MinecraftClient.getInstance().getToastManager(), SystemToast.Type.PERIODIC_NOTIFICATION, title, description));
+        MinecraftClient.getInstance().execute(() -> SystemToast.add(MinecraftClient.getInstance().getToastManager(),
+                SystemToast.Type.PERIODIC_NOTIFICATION, title, description));
     }
-    
+
     private void toastError(Text title, Text description) {
-        MinecraftClient.getInstance().execute(() -> 
-            SystemToast.add(MinecraftClient.getInstance().getToastManager(), SystemToast.Type.PACK_COPY_FAILURE, title, description));
+        MinecraftClient.getInstance().execute(() -> SystemToast.add(MinecraftClient.getInstance().getToastManager(),
+                SystemToast.Type.PACK_COPY_FAILURE, title, description));
     }
 }

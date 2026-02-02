@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "modmenu_updater",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "name": "Mod Menu Updater",
   "description": "Adds an in-game updater functionality to Mod Menu.",
   "authors": ["UDPSendToFailed"],
