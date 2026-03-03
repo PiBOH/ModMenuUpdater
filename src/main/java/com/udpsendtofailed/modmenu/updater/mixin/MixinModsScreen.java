@@ -73,7 +73,7 @@ public abstract class MixinModsScreen extends Screen {
                 this.updateButton = ButtonWidget.builder(Text.translatable("modmenu.update.button.update"), b -> {
                     if (selected != null) {
                         updater.performUpdate(selected.getMod());
-                        this.descriptionListWidget.updateSelectedMod(selected.getMod());
+                        this.descriptionListWidget.updateSelectedModIfRequired(selected.getMod());
                     }
                 })
                 .size(0, 20)
@@ -193,7 +193,7 @@ public abstract class MixinModsScreen extends Screen {
                     if (updateButton.active || !updateButton.getMessage().equals(Text.translatable("modmenu.update.state.updated"))) {
                         updateButton.setMessage(Text.translatable("modmenu.update.state.updated"));
                         updateButton.active = false;
-                        this.descriptionListWidget.updateSelectedMod(mod);
+                        this.descriptionListWidget.updateSelectedModIfRequired(mod);
                     }
                 } else {
                     updateButton.setMessage(Text.translatable("modmenu.update.button.update"));
