@@ -6,8 +6,8 @@
   "modmenu.update.state.widget.updated": "Цей мод оновлено.",
   "modmenu.update.state.widget.restartRequired": "Потрібен перезапуск, щоби застосувати зміни.",
 
-  "modmenu.update.tooltip.single": "Завантажити останню версію. Перезапуск потрібен, щоби застосувати зміни.",
-  "modmenu.update.tooltip.all": "Завантажити всі доступні оновлення. Перезапуск потрібен, щоби застосувати зміни.",
+  "modmenu.update.tooltip.single": "Завантажити останню версію. Перезапустіть гру, щоби застосувати зміни.",
+  "modmenu.update.tooltip.all": "Завантажити всі доступні оновлення. Перезапустіть гру, щоби застосувати зміни.",
 
   "modmenu.update.toast.all.started.title": "Оновлення розпочато",
   "modmenu.update.toast.all.started.description": "Завантаження оновлення мода %s…",
