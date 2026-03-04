@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Оновити",
+  "modmenu.update.button.updateAll": "Оновити всі",
+  "modmenu.update.state.updating": "Оновлення…",
+  "modmenu.update.state.updated": "Оновлено",
+  "modmenu.update.state.widget.updated": "Цей мод оновлено.",
+  "modmenu.update.state.widget.restartRequired": "Потрібен перезапуск, щоби застосувати зміни.",
+
+  "modmenu.update.tooltip.single": "Завантажити останню версію. Перезапустіть гру, щоби застосувати зміни.",
+  "modmenu.update.tooltip.all": "Завантажити всі доступні оновлення. Перезапустіть гру, щоби застосувати зміни.",
+
+  "modmenu.update.toast.all.started.title": "Оновлення розпочато",
+  "modmenu.update.toast.all.started.description": "Завантаження оновлення мода %s…",
+  "modmenu.update.toast.single.success.title": "Оновення завантажено",
+  "modmenu.update.toast.single.success.description": "%s оновлено. бкдьласка перезапустіть гру.",
+  
+  "modmenu.update.toast.error.title": "Не вдалося оновити",
+  
+  "modmenu.descriptionTranslation.modmenu_updater": "Додає внутрішньоігровий оновлювач модів для Mod Menu."
+}
