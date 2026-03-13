@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Bijwerken",
+  "modmenu.update.button.updateAll": "Alles bijwerken",
+  "modmenu.update.state.updating": "Bijwerken...",
+  "modmenu.update.state.updated": "Bijgewerkt",
+  "modmenu.update.state.widget.updated": "Deze mod is bijgewerkt.",
+  "modmenu.update.state.widget.restartRequired": "Herstart vereist om de wijzigingen toe te passen.",
+
+  "modmenu.update.tooltip.single": "Download de nieuwste versie. Een herstart is vereist om de wijzigingen toe te passen.",
+  "modmenu.update.tooltip.all": "Download alle beschikbare updates. Een herstart is vereist om de wijzigingen toe te passen.",
+
+  "modmenu.update.toast.all.started.title": "Updates gestart",
+  "modmenu.update.toast.all.started.description": "%s mod-updates worden gedownload...",
+  "modmenu.update.toast.single.success.title": "Update gedownload",
+  "modmenu.update.toast.single.success.description": "%s is bijgewerkt. Herstart het spel.",
+
+  "modmenu.update.toast.error.title": "Update mislukt",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Voegt een in-game updatefunctie toe aan het Mod Menu."
+}

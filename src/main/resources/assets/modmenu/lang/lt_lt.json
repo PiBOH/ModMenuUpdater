@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Atnaujinti",
+  "modmenu.update.button.updateAll": "Atnaujinti viską",
+  "modmenu.update.state.updating": "Atnaujinama...",
+  "modmenu.update.state.updated": "Atnaujinta",
+  "modmenu.update.state.widget.updated": "Šis modas buvo atnaujintas.",
+  "modmenu.update.state.widget.restartRequired": "Reikia paleisti iš naujo, kad būtų pritaikyti pakeitimai.",
+
+  "modmenu.update.tooltip.single": "Atsisiųsti naujausią versiją. Reikia paleisti iš naujo, kad būtų pritaikyti pakeitimai.",
+  "modmenu.update.tooltip.all": "Atsisiųsti visus galimus atnaujinimus. Reikia paleisti iš naujo, kad būtų pritaikyti pakeitimai.",
+
+  "modmenu.update.toast.all.started.title": "Atnaujinimai pradėti",
+  "modmenu.update.toast.all.started.description": "Atsisiunčiama %s modų atnaujinimų...",
+  "modmenu.update.toast.single.success.title": "Atnaujinimas atsisiųstas",
+  "modmenu.update.toast.single.success.description": "%s buvo atnaujintas. Paleiskite žaidimą iš naujo.",
+
+  "modmenu.update.toast.error.title": "Atnaujinimas nepavyko",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Prideda žaidimo viduje veikiančią atnaujinimo funkciją Mod Menu."
+}

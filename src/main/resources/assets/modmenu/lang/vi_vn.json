@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Cập nhật",
+  "modmenu.update.button.updateAll": "Cập nhật tất cả",
+  "modmenu.update.state.updating": "Đang cập nhật...",
+  "modmenu.update.state.updated": "Đã cập nhật",
+  "modmenu.update.state.widget.updated": "Mod này đã được cập nhật.",
+  "modmenu.update.state.widget.restartRequired": "Cần khởi động lại để áp dụng thay đổi.",
+
+  "modmenu.update.tooltip.single": "Tải xuống phiên bản mới nhất. Cần khởi động lại để áp dụng thay đổi.",
+  "modmenu.update.tooltip.all": "Tải xuống tất cả bản cập nhật có sẵn. Cần khởi động lại để áp dụng thay đổi.",
+
+  "modmenu.update.toast.all.started.title": "Bắt đầu cập nhật",
+  "modmenu.update.toast.all.started.description": "Đang tải %s bản cập nhật mod...",
+  "modmenu.update.toast.single.success.title": "Đã tải bản cập nhật",
+  "modmenu.update.toast.single.success.description": "%s đã được cập nhật. Vui lòng khởi động lại trò chơi.",
+
+  "modmenu.update.toast.error.title": "Cập nhật thất bại",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Thêm chức năng cập nhật trong trò chơi cho Mod Menu."
+}

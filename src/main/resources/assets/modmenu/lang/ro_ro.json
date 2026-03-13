@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Actualizare",
+  "modmenu.update.button.updateAll": "Actualizare totală",
+  "modmenu.update.state.updating": "Se actualizează...",
+  "modmenu.update.state.updated": "Actualizat",
+  "modmenu.update.state.widget.updated": "Acest mod a fost actualizat.",
+  "modmenu.update.state.widget.restartRequired": "Este necesar un restart pentru a aplica modificările.",
+
+  "modmenu.update.tooltip.single": "Descarcă ultima versiune. Este necesar un restart pentru a aplica modificările.",
+  "modmenu.update.tooltip.all": "Descarcă toate actualizările disponibile. Este necesar un restart pentru a aplica modificările.",
+
+  "modmenu.update.toast.all.started.title": "Actualizări începute",
+  "modmenu.update.toast.all.started.description": "Se descarcă %s actualizări de moduri...",
+  "modmenu.update.toast.single.success.title": "Actualizare descărcată",
+  "modmenu.update.toast.single.success.description": "%s a fost actualizat. Repornește jocul.",
+
+  "modmenu.update.toast.error.title": "Actualizarea a eșuat",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Adaugă o funcție de actualizare în joc pentru Mod Menu."
+}

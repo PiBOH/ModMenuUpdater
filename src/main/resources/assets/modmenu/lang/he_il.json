@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "עדכון",
+  "modmenu.update.button.updateAll": "עדכון הכול",
+  "modmenu.update.state.updating": "מעדכן...",
+  "modmenu.update.state.updated": "עודכן",
+  "modmenu.update.state.widget.updated": "מוד זה עודכן.",
+  "modmenu.update.state.widget.restartRequired": "נדרשת הפעלה מחדש כדי להחיל שינויים.",
+
+  "modmenu.update.tooltip.single": "הורד את הגרסה האחרונה. נדרשת הפעלה מחדש כדי להחיל שינויים.",
+  "modmenu.update.tooltip.all": "הורד את כל העדכונים הזמינים. נדרשת הפעלה מחדש כדי להחיל שינויים.",
+
+  "modmenu.update.toast.all.started.title": "העדכונים החלו",
+  "modmenu.update.toast.all.started.description": "מוריד %s עדכוני מודים...",
+  "modmenu.update.toast.single.success.title": "העדכון הורד",
+  "modmenu.update.toast.single.success.description": "%s עודכן. אנא הפעל מחדש את המשחק.",
+
+  "modmenu.update.toast.error.title": "העדכון נכשל",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "מוסיף פונקציית עדכון בתוך המשחק ל-Mod Menu."
+}

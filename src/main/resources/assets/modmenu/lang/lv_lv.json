@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Atjaunināt",
+  "modmenu.update.button.updateAll": "Atjaunināt visu",
+  "modmenu.update.state.updating": "Atjaunina...",
+  "modmenu.update.state.updated": "Atjaunināts",
+  "modmenu.update.state.widget.updated": "Šis mods ir atjaunināts.",
+  "modmenu.update.state.widget.restartRequired": "Nepieciešams restartēt, lai piemērotu izmaiņas.",
+
+  "modmenu.update.tooltip.single": "Lejupielādēt jaunāko versiju. Nepieciešams restartēt, lai piemērotu izmaiņas.",
+  "modmenu.update.tooltip.all": "Lejupielādēt visus pieejamos atjauninājumus. Nepieciešams restartēt, lai piemērotu izmaiņas.",
+
+  "modmenu.update.toast.all.started.title": "Atjauninājumi sākti",
+  "modmenu.update.toast.all.started.description": "Lejupielādē %s modu atjauninājumus...",
+  "modmenu.update.toast.single.success.title": "Atjauninājums lejupielādēts",
+  "modmenu.update.toast.single.success.description": "%s ir atjaunināts. Lūdzu, restartējiet spēli.",
+
+  "modmenu.update.toast.error.title": "Atjaunināšana neizdevās",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Pievieno spēles iekšējo atjaunināšanas funkciju Mod Menu."
+}

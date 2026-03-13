@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Mettre à jour",
+  "modmenu.update.button.updateAll": "Tout mettre à jour",
+  "modmenu.update.state.updating": "Mise à jour...",
+  "modmenu.update.state.updated": "Mis à jour",
+  "modmenu.update.state.widget.updated": "Ce mod a été mis à jour.",
+  "modmenu.update.state.widget.restartRequired": "Un redémarrage est nécessaire pour appliquer les modifications.",
+
+  "modmenu.update.tooltip.single": "Télécharger la dernière version. Un redémarrage est nécessaire pour appliquer les modifications.",
+  "modmenu.update.tooltip.all": "Télécharger toutes les mises à jour disponibles. Un redémarrage est nécessaire pour appliquer les modifications.",
+
+  "modmenu.update.toast.all.started.title": "Mises à jour lancées",
+  "modmenu.update.toast.all.started.description": "Téléchargement de %s mises à jour de mods...",
+  "modmenu.update.toast.single.success.title": "Mise à jour téléchargée",
+  "modmenu.update.toast.single.success.description": "%s a été mis à jour. Veuillez redémarrer le jeu.",
+
+  "modmenu.update.toast.error.title": "Échec de la mise à jour",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Ajoute une fonctionnalité de mise à jour en jeu au Mod Menu."
+}

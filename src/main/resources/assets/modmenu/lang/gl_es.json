@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Atualizar",
+  "modmenu.update.button.updateAll": "Actualizar todo",
+  "modmenu.update.state.updating": "Actualizando...",
+  "modmenu.update.state.updated": "Actualizado",
+  "modmenu.update.state.widget.updated": "Este mod foi actualizado.",
+  "modmenu.update.state.widget.restartRequired": "É necessário reiniciar para aplicar as alterações.",
+
+  "modmenu.update.tooltip.single": "Descargar a versión máis recente. É necesario reiniciar para aplicar os cambios.",
+  "modmenu.update.tooltip.all": "Descargar todas as actualizacións dispoñibles. É necesario reiniciar para aplicar os cambios.",
+
+  "modmenu.update.toast.all.started.title": "Actualizacións iniciadas",
+  "modmenu.update.toast.all.started.description": "Descargando %s actualizacións de mods...",
+  "modmenu.update.toast.single.success.title": "Actualización descargada",
+  "modmenu.update.toast.single.success.description": "%s foi actualizado. Reinicia o xogo.",
+
+  "modmenu.update.toast.error.title": "Erro na actualización",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Engade unha función de actualización no xogo ao Mod Menu."
+}

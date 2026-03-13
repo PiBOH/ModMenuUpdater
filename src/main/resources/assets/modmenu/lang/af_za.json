@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Opdateer",
+  "modmenu.update.button.updateAll": "Opdateer alles",
+  "modmenu.update.state.updating": "Opdateer tans...",
+  "modmenu.update.state.updated": "Opgedateer",
+  "modmenu.update.state.widget.updated": "Hierdie mod is opgedateer.",
+  "modmenu.update.state.widget.restartRequired": "Herbegin word vereis om veranderinge toe te pas.",
+
+  "modmenu.update.tooltip.single": "Laai die nuutste weergawe af. Herbegin word vereis om veranderinge toe te pas.",
+  "modmenu.update.tooltip.all": "Laai alle beskikbare opdaterings af. Herbegin word vereis om veranderinge toe te pas.",
+
+  "modmenu.update.toast.all.started.title": "Opdaterings begin",
+  "modmenu.update.toast.all.started.description": "Laai %s mod-opdaterings af...",
+  "modmenu.update.toast.single.success.title": "Opdatering afgelaai",
+  "modmenu.update.toast.single.success.description": "%s is opgedateer. Herbegin die speletjie.",
+
+  "modmenu.update.toast.error.title": "Opdatering het misluk",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Voeg 'n in-spel opdateerfunksie by die Mod Menu."
+}

@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Оновити",
+  "modmenu.update.button.updateAll": "Абнавіць усё",
+  "modmenu.update.state.updating": "Абнаўленне...",
+  "modmenu.update.state.updated": "Абноўлена",
+  "modmenu.update.state.widget.updated": "Гэты мод быў абноўлены.",
+  "modmenu.update.state.widget.restartRequired": "Патрабуецца перазапуск для прымянення змяненняў.",
+
+  "modmenu.update.tooltip.single": "Спампаваць апошнюю версію. Патрабуецца перазапуск для прымянення змяненняў.",
+  "modmenu.update.tooltip.all": "Спампаваць усе даступныя абнаўленні. Патрабуецца перазапуск для прымянення змяненняў.",
+
+  "modmenu.update.toast.all.started.title": "Абнаўленні пачатыя",
+  "modmenu.update.toast.all.started.description": "Спампоўваюцца %s абнаўленняў модаў...",
+  "modmenu.update.toast.single.success.title": "Абнаўленне спампавана",
+  "modmenu.update.toast.single.success.description": "%s быў абноўлены. Калі ласка, перазапусціце гульню.",
+
+  "modmenu.update.toast.error.title": "Памылка абнаўлення",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Дадае функцыю абнаўлення ў гульні для Mod Menu."
+}

@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Actualitza",
+  "modmenu.update.button.updateAll": "Actualitza-ho tot",
+  "modmenu.update.state.updating": "Actualitzant...",
+  "modmenu.update.state.updated": "Actualitzat",
+  "modmenu.update.state.widget.updated": "Aquest mod s'ha actualitzat.",
+  "modmenu.update.state.widget.restartRequired": "Cal reiniciar per aplicar els canvis.",
+
+  "modmenu.update.tooltip.single": "Descarrega l'última versió. Cal reiniciar per aplicar els canvis.",
+  "modmenu.update.tooltip.all": "Descarrega totes les actualitzacions disponibles. Cal reiniciar per aplicar els canvis.",
+
+  "modmenu.update.toast.all.started.title": "Actualitzacions iniciades",
+  "modmenu.update.toast.all.started.description": "Descarregant %s actualitzacions de mods...",
+  "modmenu.update.toast.single.success.title": "Actualització descarregada",
+  "modmenu.update.toast.single.success.description": "%s s'ha actualitzat. Reinicia el joc.",
+
+  "modmenu.update.toast.error.title": "Error d'actualització",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Afegeix una funció d'actualització dins del joc al Mod Menu."
+}

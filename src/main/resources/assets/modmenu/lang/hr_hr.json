@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Ažurirati",
+  "modmenu.update.button.updateAll": "Ažuriraj sve",
+  "modmenu.update.state.updating": "Ažuriranje...",
+  "modmenu.update.state.updated": "Ažurirano",
+  "modmenu.update.state.widget.updated": "Ovaj mod je ažuriran.",
+  "modmenu.update.state.widget.restartRequired": "Potrebno je ponovno pokretanje za primjenu promjena.",
+
+  "modmenu.update.tooltip.single": "Preuzmi najnoviju verziju. Potrebno je ponovno pokretanje za primjenu promjena.",
+  "modmenu.update.tooltip.all": "Preuzmi sva dostupna ažuriranja. Potrebno je ponovno pokretanje za primjenu promjena.",
+
+  "modmenu.update.toast.all.started.title": "Ažuriranja pokrenuta",
+  "modmenu.update.toast.all.started.description": "Preuzimanje %s ažuriranja modova...",
+  "modmenu.update.toast.single.success.title": "Ažuriranje preuzeto",
+  "modmenu.update.toast.single.success.description": "%s je ažuriran. Ponovno pokrenite igru.",
+
+  "modmenu.update.toast.error.title": "Ažuriranje neuspješno",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Dodaje funkciju ažuriranja u igri za Mod Menu."
+}

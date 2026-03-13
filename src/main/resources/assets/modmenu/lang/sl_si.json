@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Posodobi",
+  "modmenu.update.button.updateAll": "Posodobi vse",
+  "modmenu.update.state.updating": "Posodabljanje...",
+  "modmenu.update.state.updated": "Posodobljeno",
+  "modmenu.update.state.widget.updated": "Ta mod je bil posodobljen.",
+  "modmenu.update.state.widget.restartRequired": "Za uveljavitev sprememb je potreben ponovni zagon.",
+
+  "modmenu.update.tooltip.single": "Prenesi najnovejšo različico. Za uveljavitev sprememb je potreben ponovni zagon.",
+  "modmenu.update.tooltip.all": "Prenesi vse razpoložljive posodobitve. Za uveljavitev sprememb je potreben ponovni zagon.",
+
+  "modmenu.update.toast.all.started.title": "Posodobitve se začenjajo",
+  "modmenu.update.toast.all.started.description": "Prenašanje %s posodobitev modov...",
+  "modmenu.update.toast.single.success.title": "Posodobitev prenesena",
+  "modmenu.update.toast.single.success.description": "%s je bil posodobljen. Ponovno zaženite igro.",
+
+  "modmenu.update.toast.error.title": "Posodobitev ni uspela",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Doda funkcijo posodabljanja v igri za Mod Menu."
+}

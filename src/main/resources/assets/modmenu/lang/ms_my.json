@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Kemas kini",
+  "modmenu.update.button.updateAll": "Kemas kini semua",
+  "modmenu.update.state.updating": "Mengemas kini...",
+  "modmenu.update.state.updated": "Dikemas kini",
+  "modmenu.update.state.widget.updated": "Mod ini telah dikemas kini.",
+  "modmenu.update.state.widget.restartRequired": "Perlu dimulakan semula untuk menerapkan perubahan.",
+
+  "modmenu.update.tooltip.single": "Muat turun versi terkini. Perlu dimulakan semula untuk menerapkan perubahan.",
+  "modmenu.update.tooltip.all": "Muat turun semua kemas kini yang tersedia. Perlu dimulakan semula untuk menerapkan perubahan.",
+
+  "modmenu.update.toast.all.started.title": "Kemas kini dimulakan",
+  "modmenu.update.toast.all.started.description": "Memuat turun %s kemas kini mod...",
+  "modmenu.update.toast.single.success.title": "Kemas kini dimuat turun",
+  "modmenu.update.toast.single.success.description": "%s telah dikemas kini. Sila mulakan semula permainan.",
+
+  "modmenu.update.toast.error.title": "Kemas kini gagal",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Menambah fungsi kemas kini dalam permainan untuk Mod Menu."
+}

@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "अपडेट करें",
+  "modmenu.update.button.updateAll": "सभी अपडेट करें",
+  "modmenu.update.state.updating": "अपडेट हो रहा है...",
+  "modmenu.update.state.updated": "अपडेट हो गया",
+  "modmenu.update.state.widget.updated": "इस मॉड को अपडेट कर दिया गया है।",
+  "modmenu.update.state.widget.restartRequired": "बदलाव लागू करने के लिए पुनः आरंभ करना आवश्यक है।",
+
+  "modmenu.update.tooltip.single": "नवीनतम संस्करण डाउनलोड करें। बदलाव लागू करने के लिए पुनः आरंभ करना आवश्यक है।",
+  "modmenu.update.tooltip.all": "सभी उपलब्ध अपडेट डाउनलोड करें। बदलाव लागू करने के लिए पुनः आरंभ करना आवश्यक है।",
+
+  "modmenu.update.toast.all.started.title": "अपडेट शुरू हुए",
+  "modmenu.update.toast.all.started.description": "%s मॉड अपडेट डाउनलोड हो रहे हैं...",
+  "modmenu.update.toast.single.success.title": "अपडेट डाउनलोड हो गया",
+  "modmenu.update.toast.single.success.description": "%s अपडेट हो गया। कृपया गेम पुनः आरंभ करें।",
+
+  "modmenu.update.toast.error.title": "अपडेट विफल",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Mod Menu में इन-गेम अपडेट कार्यक्षमता जोड़ता है।"
+}

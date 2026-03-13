@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "อัปเดต",
+  "modmenu.update.button.updateAll": "อัปเดตทั้งหมด",
+  "modmenu.update.state.updating": "กำลังอัปเดต...",
+  "modmenu.update.state.updated": "อัปเดตแล้ว",
+  "modmenu.update.state.widget.updated": "ม็อดนี้ได้รับการอัปเดตแล้ว",
+  "modmenu.update.state.widget.restartRequired": "จำเป็นต้องรีสตาร์ทเพื่อใช้การเปลี่ยนแปลง",
+
+  "modmenu.update.tooltip.single": "ดาวน์โหลดเวอร์ชันล่าสุด จำเป็นต้องรีสตาร์ทเพื่อใช้การเปลี่ยนแปลง",
+  "modmenu.update.tooltip.all": "ดาวน์โหลดการอัปเดตทั้งหมดที่มี จำเป็นต้องรีสตาร์ทเพื่อใช้การเปลี่ยนแปลง",
+
+  "modmenu.update.toast.all.started.title": "เริ่มอัปเดตแล้ว",
+  "modmenu.update.toast.all.started.description": "กำลังดาวน์โหลดการอัปเดตม็อด %s รายการ...",
+  "modmenu.update.toast.single.success.title": "ดาวน์โหลดการอัปเดตแล้ว",
+  "modmenu.update.toast.single.success.description": "%s ได้รับการอัปเดตแล้ว กรุณารีสตาร์ทเกม",
+
+  "modmenu.update.toast.error.title": "อัปเดตล้มเหลว",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "เพิ่มฟังก์ชันอัปเดตในเกมสำหรับ Mod Menu"
+}

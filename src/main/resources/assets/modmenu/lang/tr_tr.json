@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Güncelle",
+  "modmenu.update.button.updateAll": "Tümünü güncelle",
+  "modmenu.update.state.updating": "Güncelleniyor...",
+  "modmenu.update.state.updated": "Güncellendi",
+  "modmenu.update.state.widget.updated": "Bu mod güncellendi.",
+  "modmenu.update.state.widget.restartRequired": "Değişikliklerin uygulanması için yeniden başlatma gerekli.",
+
+  "modmenu.update.tooltip.single": "En son sürümü indir. Değişikliklerin uygulanması için yeniden başlatma gerekli.",
+  "modmenu.update.tooltip.all": "Tüm güncellemeleri indir. Değişikliklerin uygulanması için yeniden başlatma gerekli.",
+
+  "modmenu.update.toast.all.started.title": "Güncellemeler başladı",
+  "modmenu.update.toast.all.started.description": "%s mod güncellemesi indiriliyor...",
+  "modmenu.update.toast.single.success.title": "Güncelleme indirildi",
+  "modmenu.update.toast.single.success.description": "%s güncellendi. Lütfen oyunu yeniden başlatın.",
+
+  "modmenu.update.toast.error.title": "Güncelleme başarısız",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Mod Menu'ye oyun içi güncelleme işlevi ekler."
+}

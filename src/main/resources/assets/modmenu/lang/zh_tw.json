@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "更新",
+  "modmenu.update.button.updateAll": "全部更新",
+  "modmenu.update.state.updating": "更新中...",
+  "modmenu.update.state.updated": "已更新",
+  "modmenu.update.state.widget.updated": "此模組已更新。",
+  "modmenu.update.state.widget.restartRequired": "需要重新啟動遊戲以套用變更。",
+
+  "modmenu.update.tooltip.single": "下載最新版本。需要重新啟動遊戲以套用變更。",
+  "modmenu.update.tooltip.all": "下載所有可用更新。需要重新啟動遊戲以套用變更。",
+
+  "modmenu.update.toast.all.started.title": "開始更新",
+  "modmenu.update.toast.all.started.description": "正在下載 %s 個模組更新...",
+  "modmenu.update.toast.single.success.title": "更新已下載",
+  "modmenu.update.toast.single.success.description": "%s 已更新。請重新啟動遊戲。",
+
+  "modmenu.update.toast.error.title": "更新失敗",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "為 Mod Menu 新增遊戲內模組更新功能。"
+}

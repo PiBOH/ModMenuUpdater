@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Ενημέρωση",
+  "modmenu.update.button.updateAll": "Ενημέρωση όλων",
+  "modmenu.update.state.updating": "Ενημέρωση...",
+  "modmenu.update.state.updated": "Ενημερώθηκε",
+  "modmenu.update.state.widget.updated": "Αυτό το mod ενημερώθηκε.",
+  "modmenu.update.state.widget.restartRequired": "Απαιτείται επανεκκίνηση για εφαρμογή αλλαγών.",
+
+  "modmenu.update.tooltip.single": "Λήψη της τελευταίας έκδοσης. Απαιτείται επανεκκίνηση για εφαρμογή αλλαγών.",
+  "modmenu.update.tooltip.all": "Λήψη όλων των διαθέσιμων ενημερώσεων. Απαιτείται επανεκκίνηση για εφαρμογή αλλαγών.",
+
+  "modmenu.update.toast.all.started.title": "Οι ενημερώσεις ξεκίνησαν",
+  "modmenu.update.toast.all.started.description": "Λήψη %s ενημερώσεων mod...",
+  "modmenu.update.toast.single.success.title": "Η ενημέρωση κατέβηκε",
+  "modmenu.update.toast.single.success.description": "Το %s ενημερώθηκε. Παρακαλώ επανεκκινήστε το παιχνίδι.",
+
+  "modmenu.update.toast.error.title": "Η ενημέρωση απέτυχε",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Προσθέτει λειτουργία ενημέρωσης εντός παιχνιδιού στο Mod Menu."
+}

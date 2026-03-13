@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Opdater",
+  "modmenu.update.button.updateAll": "Opdater alle",
+  "modmenu.update.state.updating": "Opdaterer...",
+  "modmenu.update.state.updated": "Opdateret",
+  "modmenu.update.state.widget.updated": "Denne mod er blevet opdateret.",
+  "modmenu.update.state.widget.restartRequired": "Genstart er nødvendig for at anvende ændringerne.",
+
+  "modmenu.update.tooltip.single": "Download den seneste version. Genstart er nødvendig for at anvende ændringerne.",
+  "modmenu.update.tooltip.all": "Download alle tilgængelige opdateringer. Genstart er nødvendig for at anvende ændringerne.",
+
+  "modmenu.update.toast.all.started.title": "Opdateringer startet",
+  "modmenu.update.toast.all.started.description": "Downloader %s modopdateringer...",
+  "modmenu.update.toast.single.success.title": "Opdatering downloadet",
+  "modmenu.update.toast.single.success.description": "%s er blevet opdateret. Genstart spillet.",
+
+  "modmenu.update.toast.error.title": "Opdatering mislykkedes",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Tilføjer en opdateringsfunktion i spillet til Mod Menu."
+}

@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Обновить",
+  "modmenu.update.button.updateAll": "Обновить всё",
+  "modmenu.update.state.updating": "Обновление...",
+  "modmenu.update.state.updated": "Обновлено",
+  "modmenu.update.state.widget.updated": "Этот мод был обновлён.",
+  "modmenu.update.state.widget.restartRequired": "Для применения изменений требуется перезапуск.",
+
+  "modmenu.update.tooltip.single": "Скачать последнюю версию. Для применения изменений требуется перезапуск.",
+  "modmenu.update.tooltip.all": "Скачать все доступные обновления. Для применения изменений требуется перезапуск.",
+
+  "modmenu.update.toast.all.started.title": "Обновления начаты",
+  "modmenu.update.toast.all.started.description": "Загрузка %s обновлений модов...",
+  "modmenu.update.toast.single.success.title": "Обновление загружено",
+  "modmenu.update.toast.single.success.description": "%s был обновлён. Пожалуйста, перезапустите игру.",
+
+  "modmenu.update.toast.error.title": "Ошибка обновления",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Добавляет функцию обновления модов в игре для Mod Menu."
+}

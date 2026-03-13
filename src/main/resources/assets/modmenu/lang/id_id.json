@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Memperbarui",
+  "modmenu.update.button.updateAll": "Perbarui semua",
+  "modmenu.update.state.updating": "Memperbarui...",
+  "modmenu.update.state.updated": "Diperbarui",
+  "modmenu.update.state.widget.updated": "Mod ini telah diperbarui.",
+  "modmenu.update.state.widget.restartRequired": "Perlu memulai ulang untuk menerapkan perubahan.",
+
+  "modmenu.update.tooltip.single": "Unduh versi terbaru. Perlu memulai ulang untuk menerapkan perubahan.",
+  "modmenu.update.tooltip.all": "Unduh semua pembaruan yang tersedia. Perlu memulai ulang untuk menerapkan perubahan.",
+
+  "modmenu.update.toast.all.started.title": "Pembaruan dimulai",
+  "modmenu.update.toast.all.started.description": "Mengunduh %s pembaruan mod...",
+  "modmenu.update.toast.single.success.title": "Pembaruan diunduh",
+  "modmenu.update.toast.single.success.description": "%s telah diperbarui. Silakan mulai ulang permainan.",
+
+  "modmenu.update.toast.error.title": "Pembaruan gagal",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Menambahkan fungsi pembaruan dalam permainan untuk Mod Menu."
+}

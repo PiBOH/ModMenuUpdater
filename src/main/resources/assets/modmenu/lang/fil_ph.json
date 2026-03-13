@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "I-update",
+  "modmenu.update.button.updateAll": "I-update lahat",
+  "modmenu.update.state.updating": "Nag-a-update...",
+  "modmenu.update.state.updated": "Na-update na",
+  "modmenu.update.state.widget.updated": "Ang mod na ito ay na-update na.",
+  "modmenu.update.state.widget.restartRequired": "Kailangan i-restart para ma-apply ang mga pagbabago.",
+
+  "modmenu.update.tooltip.single": "I-download ang pinakabagong bersyon. Kailangan i-restart para ma-apply ang mga pagbabago.",
+  "modmenu.update.tooltip.all": "I-download lahat ng available na updates. Kailangan i-restart para ma-apply ang mga pagbabago.",
+
+  "modmenu.update.toast.all.started.title": "Nagsimula na ang mga update",
+  "modmenu.update.toast.all.started.description": "Nagda-download ng %s mod updates...",
+  "modmenu.update.toast.single.success.title": "Na-download na ang update",
+  "modmenu.update.toast.single.success.description": "Na-update na ang %s. Paki-restart ang laro.",
+
+  "modmenu.update.toast.error.title": "Nabigo ang update",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Nagdadagdag ng in-game updater functionality sa Mod Menu."
+}

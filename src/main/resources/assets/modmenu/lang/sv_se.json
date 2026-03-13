@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Uppdatera",
+  "modmenu.update.button.updateAll": "Uppdatera alla",
+  "modmenu.update.state.updating": "Uppdaterar...",
+  "modmenu.update.state.updated": "Uppdaterad",
+  "modmenu.update.state.widget.updated": "Denna mod har uppdaterats.",
+  "modmenu.update.state.widget.restartRequired": "Omstart krävs för att tillämpa ändringarna.",
+
+  "modmenu.update.tooltip.single": "Ladda ner den senaste versionen. Omstart krävs för att tillämpa ändringarna.",
+  "modmenu.update.tooltip.all": "Ladda ner alla tillgängliga uppdateringar. Omstart krävs för att tillämpa ändringarna.",
+
+  "modmenu.update.toast.all.started.title": "Uppdateringar påbörjade",
+  "modmenu.update.toast.all.started.description": "Laddar ner %s modduppdateringar...",
+  "modmenu.update.toast.single.success.title": "Uppdatering nedladdad",
+  "modmenu.update.toast.single.success.description": "%s har uppdaterats. Starta om spelet.",
+
+  "modmenu.update.toast.error.title": "Uppdateringen misslyckades",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Lägger till en uppdateringsfunktion i spelet för Mod Menu."
+}

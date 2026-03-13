@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Aktualizovať",
+  "modmenu.update.button.updateAll": "Aktualizovať všetko",
+  "modmenu.update.state.updating": "Aktualizácia...",
+  "modmenu.update.state.updated": "Aktualizované",
+  "modmenu.update.state.widget.updated": "Tento mod bol aktualizovaný.",
+  "modmenu.update.state.widget.restartRequired": "Na použitie zmien je potrebný reštart.",
+
+  "modmenu.update.tooltip.single": "Stiahnuť najnovšiu verziu. Na použitie zmien je potrebný reštart.",
+  "modmenu.update.tooltip.all": "Stiahnuť všetky dostupné aktualizácie. Na použitie zmien je potrebný reštart.",
+
+  "modmenu.update.toast.all.started.title": "Aktualizácie spustené",
+  "modmenu.update.toast.all.started.description": "Sťahovanie %s aktualizácií modov...",
+  "modmenu.update.toast.single.success.title": "Aktualizácia stiahnutá",
+  "modmenu.update.toast.single.success.description": "%s bol aktualizovaný. Reštartujte hru.",
+
+  "modmenu.update.toast.error.title": "Aktualizácia zlyhala",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Pridáva funkciu aktualizácie modov priamo v hre do Mod Menu."
+}

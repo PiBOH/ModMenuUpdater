@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "アップデート",
+  "modmenu.update.button.updateAll": "すべてアップデート",
+  "modmenu.update.state.updating": "更新中...",
+  "modmenu.update.state.updated": "更新済み",
+  "modmenu.update.state.widget.updated": "このMODは更新されました。",
+  "modmenu.update.state.widget.restartRequired": "変更を適用するにはゲームの再起動が必要です。",
+
+  "modmenu.update.tooltip.single": "最新バージョンをダウンロードします。変更を適用するにはゲームの再起動が必要です。",
+  "modmenu.update.tooltip.all": "利用可能なすべてのアップデートをダウンロードします。変更を適用するにはゲームの再起動が必要です。",
+
+  "modmenu.update.toast.all.started.title": "アップデート開始",
+  "modmenu.update.toast.all.started.description": "%s 件のMODアップデートをダウンロード中...",
+  "modmenu.update.toast.single.success.title": "アップデートをダウンロードしました",
+  "modmenu.update.toast.single.success.description": "%s が更新されました。ゲームを再起動してください。",
+
+  "modmenu.update.toast.error.title": "アップデート失敗",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Mod Menuにゲーム内アップデート機能を追加します。"
+}

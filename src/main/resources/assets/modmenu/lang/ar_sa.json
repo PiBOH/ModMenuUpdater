@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "تحديث",
+  "modmenu.update.button.updateAll": "تحديث الكل",
+  "modmenu.update.state.updating": "جارٍ التحديث...",
+  "modmenu.update.state.updated": "تم التحديث",
+  "modmenu.update.state.widget.updated": "تم تحديث هذا المود.",
+  "modmenu.update.state.widget.restartRequired": "يلزم إعادة التشغيل لتطبيق التغييرات.",
+
+  "modmenu.update.tooltip.single": "تنزيل أحدث إصدار. يلزم إعادة التشغيل لتطبيق التغييرات.",
+  "modmenu.update.tooltip.all": "تنزيل جميع التحديثات المتاحة. يلزم إعادة التشغيل لتطبيق التغييرات.",
+
+  "modmenu.update.toast.all.started.title": "بدأت التحديثات",
+  "modmenu.update.toast.all.started.description": "جارٍ تنزيل %s تحديثات مودات...",
+  "modmenu.update.toast.single.success.title": "تم تنزيل التحديث",
+  "modmenu.update.toast.single.success.description": "تم تحديث %s. يرجى إعادة تشغيل اللعبة.",
+
+  "modmenu.update.toast.error.title": "فشل التحديث",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "يضيف وظيفة تحديث داخل اللعبة لقائمة المودات."
+}

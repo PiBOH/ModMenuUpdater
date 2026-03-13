@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Uuenda",
+  "modmenu.update.button.updateAll": "Uuenda kõik",
+  "modmenu.update.state.updating": "Uuendamine...",
+  "modmenu.update.state.updated": "Uuendatud",
+  "modmenu.update.state.widget.updated": "See mod on uuendatud.",
+  "modmenu.update.state.widget.restartRequired": "Muudatuste rakendamiseks on vajalik taaskäivitus.",
+
+  "modmenu.update.tooltip.single": "Laadi alla uusim versioon. Muudatuste rakendamiseks on vajalik taaskäivitus.",
+  "modmenu.update.tooltip.all": "Laadi alla kõik saadaolevad uuendused. Muudatuste rakendamiseks on vajalik taaskäivitus.",
+
+  "modmenu.update.toast.all.started.title": "Uuendused alustatud",
+  "modmenu.update.toast.all.started.description": "%s modi uuenduse allalaadimine...",
+  "modmenu.update.toast.single.success.title": "Uuendus alla laaditud",
+  "modmenu.update.toast.single.success.description": "%s on uuendatud. Palun käivita mäng uuesti.",
+
+  "modmenu.update.toast.error.title": "Uuendamine ebaõnnestus",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Lisab mängusisese uuendamisfunktsiooni Mod Menüüsse."
+}

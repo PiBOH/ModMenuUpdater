@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Оновити",
+  "modmenu.update.button.updateAll": "Обнови всички",
+  "modmenu.update.state.updating": "Обновяване...",
+  "modmenu.update.state.updated": "Обновено",
+  "modmenu.update.state.widget.updated": "Този мод беше обновен.",
+  "modmenu.update.state.widget.restartRequired": "Необходимо е рестартиране за прилагане на промените.",
+
+  "modmenu.update.tooltip.single": "Изтегли последната версия. Необходимо е рестартиране за прилагане на промените.",
+  "modmenu.update.tooltip.all": "Изтегли всички налични актуализации. Необходимо е рестартиране за прилагане на промените.",
+
+  "modmenu.update.toast.all.started.title": "Актуализациите започнаха",
+  "modmenu.update.toast.all.started.description": "Изтегляне на %s актуализации на модове...",
+  "modmenu.update.toast.single.success.title": "Актуализацията е изтеглена",
+  "modmenu.update.toast.single.success.description": "%s беше обновен. Моля, рестартирайте играта.",
+
+  "modmenu.update.toast.error.title": "Неуспешна актуализация",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Добавя функция за актуализация в играта към Mod Menu."
+}

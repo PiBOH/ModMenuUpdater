@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Frissítés",
+  "modmenu.update.button.updateAll": "Összes frissítése",
+  "modmenu.update.state.updating": "Frissítés...",
+  "modmenu.update.state.updated": "Frissítve",
+  "modmenu.update.state.widget.updated": "Ez a mod frissítve lett.",
+  "modmenu.update.state.widget.restartRequired": "A módosítások alkalmazásához újraindítás szükséges.",
+
+  "modmenu.update.tooltip.single": "A legújabb verzió letöltése. A módosítások alkalmazásához újraindítás szükséges.",
+  "modmenu.update.tooltip.all": "Az összes elérhető frissítés letöltése. A módosítások alkalmazásához újraindítás szükséges.",
+
+  "modmenu.update.toast.all.started.title": "Frissítések elindítva",
+  "modmenu.update.toast.all.started.description": "%s modfrissítés letöltése...",
+  "modmenu.update.toast.single.success.title": "Frissítés letöltve",
+  "modmenu.update.toast.single.success.description": "%s frissítve lett. Indítsd újra a játékot.",
+
+  "modmenu.update.toast.error.title": "Frissítés sikertelen",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Játékon belüli frissítési funkciót ad a Mod Menühöz."
+}

@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "업데이트",
+  "modmenu.update.button.updateAll": "모두 업데이트",
+  "modmenu.update.state.updating": "업데이트 중...",
+  "modmenu.update.state.updated": "업데이트됨",
+  "modmenu.update.state.widget.updated": "이 모드가 업데이트되었습니다.",
+  "modmenu.update.state.widget.restartRequired": "변경 사항을 적용하려면 게임을 다시 시작해야 합니다.",
+
+  "modmenu.update.tooltip.single": "최신 버전을 다운로드합니다. 변경 사항을 적용하려면 게임을 다시 시작해야 합니다.",
+  "modmenu.update.tooltip.all": "사용 가능한 모든 업데이트를 다운로드합니다. 변경 사항을 적용하려면 게임을 다시 시작해야 합니다.",
+
+  "modmenu.update.toast.all.started.title": "업데이트 시작",
+  "modmenu.update.toast.all.started.description": "%s개의 모드 업데이트 다운로드 중...",
+  "modmenu.update.toast.single.success.title": "업데이트 다운로드 완료",
+  "modmenu.update.toast.single.success.description": "%s이(가) 업데이트되었습니다. 게임을 다시 시작해 주세요.",
+
+  "modmenu.update.toast.error.title": "업데이트 실패",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Mod Menu에 게임 내 업데이트 기능을 추가합니다."
+}

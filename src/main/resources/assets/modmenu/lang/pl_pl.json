@@ -1,0 +1,20 @@
+{
+  "modmenu.update.button.update": "Zaktualizuj",
+  "modmenu.update.button.updateAll": "Zaktualizuj wszystko",
+  "modmenu.update.state.updating": "Aktualizowanie...",
+  "modmenu.update.state.updated": "Zaktualizowano",
+  "modmenu.update.state.widget.updated": "Ten mod został zaktualizowany.",
+  "modmenu.update.state.widget.restartRequired": "Wymagany restart w celu zastosowania zmian.",
+
+  "modmenu.update.tooltip.single": "Pobierz najnowszą wersję. Wymagany restart w celu zastosowania zmian.",
+  "modmenu.update.tooltip.all": "Pobierz wszystkie dostępne aktualizacje. Wymagany restart w celu zastosowania zmian.",
+
+  "modmenu.update.toast.all.started.title": "Aktualizacje rozpoczęte",
+  "modmenu.update.toast.all.started.description": "Pobieranie %s aktualizacji modów...",
+  "modmenu.update.toast.single.success.title": "Aktualizacja pobrana",
+  "modmenu.update.toast.single.success.description": "%s został zaktualizowany. Uruchom ponownie grę.",
+
+  "modmenu.update.toast.error.title": "Aktualizacja nie powiodła się",
+
+  "modmenu.descriptionTranslation.modmenu_updater": "Dodaje funkcję aktualizacji modów w grze do Mod Menu."
+}
