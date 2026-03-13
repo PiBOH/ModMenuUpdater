@@ -27,13 +27,22 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
 
 public class ModUpdaterService {
     public static final Logger LOGGER = LoggerFactory.getLogger("Mod Menu Updater");
     private final ModsScreen screen;
     private final Path modsDir = FabricLoader.getInstance().getGameDir().resolve("mods");
     private static final HttpClient HTTP_CLIENT = HttpClient.newHttpClient();
-    private static final ExecutorService EXECUTOR = Executors.newFixedThreadPool(4);
+    private static final ExecutorService EXECUTOR = Executors.newFixedThreadPool(4, new ThreadFactory() {
+        private int count = 0;
+        @Override
+        public Thread newThread(Runnable r) {
+            Thread t = new Thread(r, "ModMenuUpdater-" + count++);
+            t.setDaemon(true);
+            return t;
+        }
+    });
 
     public ModUpdaterService(ModsScreen screen) {
         this.screen = screen;
@@ -79,8 +88,9 @@ public class ModUpdaterService {
         ext.setDownloadingUpdate(true);
 
         CompletableFuture.runAsync(() -> {
+            Path tempFile = null;
             try {
-                Path tempFile = downloadFile(info.getDownloadUrl());
+                tempFile = downloadFile(info.getDownloadUrl());
 
                 if (info.getFileHash() != null) {
                     String downloadedHash = Files.asByteSource(tempFile.toFile()).hash(Hashing.sha512()).toString();
@@ -89,8 +99,10 @@ public class ModUpdaterService {
                     }
                 }
 
-                Path newFilePath = modsDir.resolve(info.getFileName());
+                String safeName = Path.of(info.getFileName()).getFileName().toString();
+                Path newFilePath = modsDir.resolve(safeName);
                 java.nio.file.Files.move(tempFile, newFilePath, StandardCopyOption.REPLACE_EXISTING);
+                tempFile = null;
 
                 CleanupManager.scheduleForCleanup(oldFile.get());
 
@@ -109,6 +121,11 @@ public class ModUpdaterService {
                 }
             } catch (Exception e) {
                 LOGGER.error("Update failed for " + mod.getName(), e);
+                if (tempFile != null) {
+                    try {
+                        java.nio.file.Files.deleteIfExists(tempFile);
+                    } catch (IOException ignored) {}
+                }
                 toastError(
                         Text.translatable("modmenu.update.toast.error.title"),
                         Text.literal(mod.getName() + ": " + e.getMessage()));

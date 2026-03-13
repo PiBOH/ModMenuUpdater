@@ -10,8 +10,8 @@ import org.spongepowered.asm.mixin.Unique;
 public class MixinFabricMod implements ModExtension {
     @Shadow protected boolean childHasUpdate;
     
-    @Unique private boolean isDownloadingUpdate = false;
-    @Unique private boolean isUpdateDownloaded = false;
+    @Unique private volatile boolean isDownloadingUpdate = false;
+    @Unique private volatile boolean isUpdateDownloaded = false;
 
     @Override
     public void setDownloadingUpdate(boolean downloading) {

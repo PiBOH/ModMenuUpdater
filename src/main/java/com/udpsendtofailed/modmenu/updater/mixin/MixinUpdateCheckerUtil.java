@@ -4,13 +4,16 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.terraformersmc.modmenu.util.UpdateCheckerUtil;
-import com.udpsendtofailed.modmenu.updater.UpdateDataStorage; // IMPORT NEW CLASS
+import com.udpsendtofailed.modmenu.updater.UpdateDataStorage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(UpdateCheckerUtil.class)
 public class MixinUpdateCheckerUtil {
+    private static final Logger LOGGER = LoggerFactory.getLogger("Mod Menu Updater");
 
     @Redirect(
         method = "getUpdatedVersions", 
@@ -39,12 +42,15 @@ public class MixinUpdateCheckerUtil {
                         String filename = file.get("filename").getAsString();
                         String hash = file.get("hashes").getAsJsonObject().get("sha512").getAsString();
                         
-                        // USE THE NEW STORAGE CLASS
                         UpdateDataStorage.DOWNLOAD_CACHE.put(versionId, new UpdateDataStorage.DownloadData(url, filename, hash));
                     }
-                } catch (Exception ignored) {}
+                } catch (Exception e) {
+                    LOGGER.debug("Failed to parse download info for version entry", e);
+                }
             });
-        } catch (Exception ignored) {}
+        } catch (Exception e) {
+            LOGGER.debug("Failed to parse Modrinth update response for download info", e);
+        }
 
         return result;
     }

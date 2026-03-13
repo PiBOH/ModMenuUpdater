@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Mod.class)
-public interface MixinMod_Logic {
+public interface MixinModLogic {
 
     /**
      * Intercepts the default 'hasUpdate' method in the Mod interface.

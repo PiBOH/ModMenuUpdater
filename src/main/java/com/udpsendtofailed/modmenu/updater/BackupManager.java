@@ -78,7 +78,7 @@ public class BackupManager {
     }
 
     private Optional<ModJarInfo> readModInfo(Path jarPath) {
-        try (FileSystem fs = FileSystems.newFileSystem(jarPath, (ClassLoader) null)) {
+        try (FileSystem fs = FileSystems.newFileSystem(jarPath)) {
             Path modJsonPath = fs.getPath("fabric.mod.json");
             if (!Files.exists(modJsonPath)) return Optional.empty();
             

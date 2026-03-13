@@ -38,6 +38,7 @@ public abstract class MixinModsScreen extends Screen {
     @Unique private ModUpdaterService updater;
     @Unique private ClickableWidget updateButton;
     @Unique private ClickableWidget updateAllButton;
+    @Unique private int cachedIssuesRightAlign;
 
     protected MixinModsScreen(Text title) { super(title); }
 
@@ -125,22 +126,28 @@ public abstract class MixinModsScreen extends Screen {
             int urlButtonWidths = this.paneWidth / 2 - 2;
             int cappedButtonWidth = Math.min(urlButtonWidths, 200);
             int issuesButtonX = this.rightPaneX + urlButtonWidths + 4 + (urlButtonWidths / 2) - (cappedButtonWidth / 2);
-            int issuesRightAlign = issuesButtonX + cappedButtonWidth;
-            int updateButtonWidth = this.textRenderer.getWidth(Text.translatable("modmenu.update.state.updating")) + 10;
+            this.cachedIssuesRightAlign = issuesButtonX + cappedButtonWidth;
+            int updateButtonWidth = Math.max(
+                    this.textRenderer.getWidth(Text.translatable("modmenu.update.state.updating")),
+                    Math.max(
+                            this.textRenderer.getWidth(Text.translatable("modmenu.update.state.updated")),
+                            this.textRenderer.getWidth(Text.translatable("modmenu.update.button.update"))
+                    )
+            ) + 10;
             
             this.updateButton.setWidth(updateButtonWidth);
             this.updateButton.setY(48);
 
             boolean configVisible = this.configureButton != null && this.configureButton.visible;
             if (configVisible) {
-                this.updateButton.setX(issuesRightAlign - 20 - updateButtonWidth - 2);
+                this.updateButton.setX(this.cachedIssuesRightAlign - 20 - updateButtonWidth - 2);
             } else {
-                this.updateButton.setX(issuesRightAlign - updateButtonWidth);
+                this.updateButton.setX(this.cachedIssuesRightAlign - updateButtonWidth);
             }
             
             // Re-apply configure button pos
             if (this.configureButton != null) {
-                this.configureButton.setX(issuesRightAlign - 20);
+                this.configureButton.setX(this.cachedIssuesRightAlign - 20);
             }
         }
     }
@@ -174,16 +181,12 @@ public abstract class MixinModsScreen extends Screen {
             if (updateButton != null) {
                 updateButton.visible = hasUrl || ext.isUpdateDownloaded();
                 
-                int urlButtonWidths = this.paneWidth / 2 - 2;
-                int cappedButtonWidth = Math.min(urlButtonWidths, 200);
-                int issuesButtonX = this.rightPaneX + urlButtonWidths + 4 + (urlButtonWidths / 2) - (cappedButtonWidth / 2);
-                int issuesRightAlign = issuesButtonX + cappedButtonWidth;
                 boolean configVisible = this.configureButton != null && this.configureButton.visible;
                 
                 if (configVisible) {
-                    updateButton.setX(issuesRightAlign - 20 - updateButton.getWidth() - 2);
+                    updateButton.setX(this.cachedIssuesRightAlign - 20 - updateButton.getWidth() - 2);
                 } else {
-                    updateButton.setX(issuesRightAlign - updateButton.getWidth());
+                    updateButton.setX(this.cachedIssuesRightAlign - updateButton.getWidth());
                 }
 
                 if (ext.isDownloadingUpdate()) {
