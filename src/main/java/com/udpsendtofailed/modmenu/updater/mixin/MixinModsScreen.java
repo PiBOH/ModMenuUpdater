@@ -9,12 +9,12 @@ import com.udpsendtofailed.modmenu.updater.ModUpdaterService;
 import com.udpsendtofailed.modmenu.updater.api.ModExtension;
 import com.udpsendtofailed.modmenu.updater.api.UpdateInfoExtension;
 import com.terraformersmc.modmenu.util.mod.Mod;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.tooltip.Tooltip;
-import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.gui.widget.ClickableWidget;
-import net.minecraft.client.gui.widget.TextFieldWidget;
-import net.minecraft.text.Text;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.components.Tooltip;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.AbstractWidget;
+import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.network.chat.Component;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -27,20 +27,20 @@ public abstract class MixinModsScreen extends Screen {
     @Shadow private ModListEntry selected;
     @Shadow private int paneWidth;
     @Shadow private int rightPaneX;
-    @Shadow private TextFieldWidget searchBox;
-    @Shadow private ClickableWidget filtersButton;
+    @Shadow private EditBox searchBox;
+    @Shadow private AbstractWidget filtersButton;
     @Shadow private int searchBoxX; 
     @Shadow private int filtersX; 
     @Shadow private int searchRowWidth;
     @Shadow private DescriptionListWidget descriptionListWidget;
-    @Shadow private ClickableWidget configureButton;
+    @Shadow private AbstractWidget configureButton;
 
     @Unique private ModUpdaterService updater;
-    @Unique private ClickableWidget updateButton;
-    @Unique private ClickableWidget updateAllButton;
+    @Unique private AbstractWidget updateButton;
+    @Unique private AbstractWidget updateAllButton;
     @Unique private int cachedIssuesRightAlign;
 
-    protected MixinModsScreen(Text title) { super(title); }
+    protected MixinModsScreen(Component title) { super(title); }
 
     @Inject(method = "<init>", at = @At("RETURN"))
     private void initService(Screen previous, CallbackInfo ci) {
@@ -56,13 +56,13 @@ public abstract class MixinModsScreen extends Screen {
         // Update All Button
         if (updateChecksEnabled) {
             if (this.updateAllButton == null) {
-                this.updateAllButton = ButtonWidget.builder(Text.translatable("modmenu.update.button.updateAll"), b -> updater.performUpdateAll())
+                this.updateAllButton = Button.builder(Component.translatable("modmenu.update.button.updateAll"), b -> updater.performUpdateAll())
                     .size(0, 20)
                     .build();
-                this.updateAllButton.setTooltip(Tooltip.of(Text.translatable("modmenu.update.tooltip.all")));
+                this.updateAllButton.setTooltip(Tooltip.create(Component.translatable("modmenu.update.tooltip.all")));
             }
             // Always add it to the screen if enabled
-            this.addDrawableChild(this.updateAllButton);
+            this.addRenderableWidget(this.updateAllButton);
         } else {
             // If disabled, clear the reference so it's recreated fresh if re-enabled
             this.updateAllButton = null;
@@ -71,7 +71,7 @@ public abstract class MixinModsScreen extends Screen {
         // Update Button (Single)
         if (updateChecksEnabled) {
             if (this.updateButton == null) {
-                this.updateButton = ButtonWidget.builder(Text.translatable("modmenu.update.button.update"), b -> {
+                this.updateButton = Button.builder(Component.translatable("modmenu.update.button.update"), b -> {
                     if (selected != null) {
                         updater.performUpdate(selected.getMod());
                         this.descriptionListWidget.updateSelectedMod(selected.getMod());
@@ -80,10 +80,10 @@ public abstract class MixinModsScreen extends Screen {
                 .size(0, 20)
                 .build();
                 this.updateButton.visible = false;
-                this.updateButton.setTooltip(Tooltip.of(Text.translatable("modmenu.update.tooltip.single")));
+                this.updateButton.setTooltip(Tooltip.create(Component.translatable("modmenu.update.tooltip.single")));
             }
             // Always add it to the screen if enabled
-            this.addDrawableChild(this.updateButton);
+            this.addRenderableWidget(this.updateButton);
         } else {
             this.updateButton = null;
         }
@@ -91,8 +91,8 @@ public abstract class MixinModsScreen extends Screen {
         // --- 2. PRECISE LAYOUT CALCULATION ---
         // Only run layout math if we are actually rendering the buttons
         
-        Text updateAllText = Text.translatable("modmenu.update.button.updateAll");
-        int updateAllButtonWidth = updateChecksEnabled ? this.textRenderer.getWidth(updateAllText) + 20 : 0;
+        Component updateAllText = Component.translatable("modmenu.update.button.updateAll");
+        int updateAllButtonWidth = updateChecksEnabled ? this.font.width(updateAllText) + 20 : 0;
         int updateAllGap = updateChecksEnabled ? 2 : 0;
         int filtersButtonSize = (ModMenuConfig.CONFIG_MODE.getValue() ? 0 : 22);
 
@@ -128,10 +128,10 @@ public abstract class MixinModsScreen extends Screen {
             int issuesButtonX = this.rightPaneX + urlButtonWidths + 4 + (urlButtonWidths / 2) - (cappedButtonWidth / 2);
             this.cachedIssuesRightAlign = issuesButtonX + cappedButtonWidth;
             int updateButtonWidth = Math.max(
-                    this.textRenderer.getWidth(Text.translatable("modmenu.update.state.updating")),
+                    this.font.width(Component.translatable("modmenu.update.state.updating")),
                     Math.max(
-                            this.textRenderer.getWidth(Text.translatable("modmenu.update.state.updated")),
-                            this.textRenderer.getWidth(Text.translatable("modmenu.update.button.update"))
+                            this.font.width(Component.translatable("modmenu.update.state.updated")),
+                            this.font.width(Component.translatable("modmenu.update.button.update"))
                     )
             ) + 10;
             
@@ -152,7 +152,7 @@ public abstract class MixinModsScreen extends Screen {
         }
     }
 
-    @Inject(method = "render", at = @At(value = "INVOKE", target = "Lcom/terraformersmc/modmenu/gui/widget/ModListWidget;render(Lnet/minecraft/client/gui/DrawContext;IIF)V"))
+    @Inject(method = "extractRenderState", at = @At("HEAD"))
     private void updateButtonState(CallbackInfo ci) {
         if (updateAllButton != null) {
             boolean anyUpdates = ModMenu.MODS.values().stream().anyMatch(m ->
@@ -190,16 +190,16 @@ public abstract class MixinModsScreen extends Screen {
                 }
 
                 if (ext.isDownloadingUpdate()) {
-                    updateButton.setMessage(Text.translatable("modmenu.update.state.updating"));
+                    updateButton.setMessage(Component.translatable("modmenu.update.state.updating"));
                     updateButton.active = false;
                 } else if (ext.isUpdateDownloaded()) {
-                    if (updateButton.active || !updateButton.getMessage().equals(Text.translatable("modmenu.update.state.updated"))) {
-                        updateButton.setMessage(Text.translatable("modmenu.update.state.updated"));
+                    if (updateButton.active || !updateButton.getMessage().equals(Component.translatable("modmenu.update.state.updated"))) {
+                        updateButton.setMessage(Component.translatable("modmenu.update.state.updated"));
                         updateButton.active = false;
                         this.descriptionListWidget.updateSelectedMod(mod);
                     }
                 } else {
-                    updateButton.setMessage(Text.translatable("modmenu.update.button.update"));
+                    updateButton.setMessage(Component.translatable("modmenu.update.button.update"));
                     updateButton.active = mod.hasUpdate();
                 }
             }

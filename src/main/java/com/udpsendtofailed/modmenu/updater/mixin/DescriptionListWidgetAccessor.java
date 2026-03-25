@@ -1,11 +1,11 @@
 package com.udpsendtofailed.modmenu.updater.mixin;
 
-import net.minecraft.client.gui.widget.EntryListWidget;
+import net.minecraft.client.gui.components.AbstractSelectionList;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Invoker;
 
-@Mixin(EntryListWidget.class)
+@Mixin(AbstractSelectionList.class)
 public interface DescriptionListWidgetAccessor {
     @Invoker("addEntry")
-    int invokeAddEntry(EntryListWidget.Entry<?> entry);
+    int invokeAddEntry(AbstractSelectionList.Entry<?> entry);
 }

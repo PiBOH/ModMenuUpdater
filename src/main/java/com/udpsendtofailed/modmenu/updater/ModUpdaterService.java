@@ -8,9 +8,9 @@ import com.udpsendtofailed.modmenu.updater.api.ModExtension;
 import com.udpsendtofailed.modmenu.updater.api.UpdateInfoExtension;
 import com.terraformersmc.modmenu.util.mod.Mod;
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.toast.SystemToast;
-import net.minecraft.text.Text;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.components.toasts.SystemToast;
+import net.minecraft.network.chat.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -63,8 +63,8 @@ public class ModUpdaterService {
             return;
 
         toastSuccess(
-                Text.translatable("modmenu.update.toast.all.started.title"),
-                Text.translatable("modmenu.update.toast.all.started.description", toUpdate.size()));
+                Component.translatable("modmenu.update.toast.all.started.title"),
+                Component.translatable("modmenu.update.toast.all.started.description", toUpdate.size()));
 
         for (Mod mod : toUpdate) {
             performUpdate(mod);
@@ -107,8 +107,8 @@ public class ModUpdaterService {
                 CleanupManager.scheduleForCleanup(oldFile.get());
 
                 toastSuccess(
-                        Text.translatable("modmenu.update.toast.single.success.title"),
-                        Text.translatable("modmenu.update.toast.single.success.description", mod.getName()));
+                        Component.translatable("modmenu.update.toast.single.success.title"),
+                        Component.translatable("modmenu.update.toast.single.success.description", mod.getName()));
 
                 ext.setUpdateDownloaded(true);
 
@@ -127,8 +127,8 @@ public class ModUpdaterService {
                     } catch (IOException ignored) {}
                 }
                 toastError(
-                        Text.translatable("modmenu.update.toast.error.title"),
-                        Text.literal(mod.getName() + ": " + e.getMessage()));
+                        Component.translatable("modmenu.update.toast.error.title"),
+                        Component.literal(mod.getName() + ": " + e.getMessage()));
             } finally {
                 ext.setDownloadingUpdate(false);
             }
@@ -164,13 +164,13 @@ public class ModUpdaterService {
         return Optional.empty();
     }
 
-    private void toastSuccess(Text title, Text description) {
-        MinecraftClient.getInstance().execute(() -> SystemToast.add(MinecraftClient.getInstance().getToastManager(),
-                SystemToast.Type.PERIODIC_NOTIFICATION, title, description));
+    private void toastSuccess(Component title, Component description) {
+        Minecraft.getInstance().execute(() -> SystemToast.add(Minecraft.getInstance().getToastManager(),
+                SystemToast.SystemToastId.PERIODIC_NOTIFICATION, title, description));
     }
 
-    private void toastError(Text title, Text description) {
-        MinecraftClient.getInstance().execute(() -> SystemToast.add(MinecraftClient.getInstance().getToastManager(),
-                SystemToast.Type.PACK_COPY_FAILURE, title, description));
+    private void toastError(Component title, Component description) {
+        Minecraft.getInstance().execute(() -> SystemToast.add(Minecraft.getInstance().getToastManager(),
+                SystemToast.SystemToastId.PACK_COPY_FAILURE, title, description));
     }
 }
