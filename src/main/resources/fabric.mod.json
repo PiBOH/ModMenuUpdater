@@ -4,7 +4,9 @@
   "version": "${version}",
   "name": "Mod Menu Updater",
   "description": "Adds an in-game updater functionality to Mod Menu.",
-  "authors": ["UDPSendToFailed"],
+  "authors": [
+    "UDPSendToFailed"
+  ],
   "contact": {
     "homepage": "https://modrinth.com/project/modmenu-updater",
     "sources": "https://github.com/UDPSendToFailed/ModMenuUpdater",
@@ -26,6 +28,6 @@
     "fabricloader": ">=0.14.0",
     "minecraft": ">=1.21.11-",
     "java": ">=17",
-    "modmenu": "=18.0.0-alpha.8"
+    "modmenu": "=18.0.0-beta.1"
   }
 }
