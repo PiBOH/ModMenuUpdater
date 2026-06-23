@@ -14,6 +14,7 @@ import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.components.EditBox;
+import net.minecraft.client.gui.components.SpriteIconButton;
 import net.minecraft.network.chat.Component;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -28,12 +29,12 @@ public abstract class MixinModsScreen extends Screen {
     @Shadow private int paneWidth;
     @Shadow private int rightPaneX;
     @Shadow private EditBox searchBox;
-    @Shadow private AbstractWidget filtersButton;
+    @Shadow private SpriteIconButton filtersButton;
     @Shadow private int searchBoxX; 
     @Shadow private int filtersX; 
     @Shadow private int searchRowWidth;
     @Shadow private DescriptionListWidget descriptionListWidget;
-    @Shadow private AbstractWidget configureButton;
+    @Shadow private SpriteIconButton configureButton;
 
     @Unique private ModUpdaterService updater;
     @Unique private AbstractWidget updateButton;

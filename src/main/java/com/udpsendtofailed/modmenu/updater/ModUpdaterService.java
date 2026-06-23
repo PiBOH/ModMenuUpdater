@@ -165,12 +165,12 @@ public class ModUpdaterService {
     }
 
     private void toastSuccess(Component title, Component description) {
-        Minecraft.getInstance().execute(() -> SystemToast.add(Minecraft.getInstance().getToastManager(),
+        Minecraft.getInstance().execute(() -> SystemToast.add(Minecraft.getInstance().gui.toastManager(),
                 SystemToast.SystemToastId.PERIODIC_NOTIFICATION, title, description));
     }
 
     private void toastError(Component title, Component description) {
-        Minecraft.getInstance().execute(() -> SystemToast.add(Minecraft.getInstance().getToastManager(),
+        Minecraft.getInstance().execute(() -> SystemToast.add(Minecraft.getInstance().gui.toastManager(),
                 SystemToast.SystemToastId.PACK_COPY_FAILURE, title, description));
     }
 }
