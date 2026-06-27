@@ -103,7 +103,7 @@ body:
       required: true
  
  - type: dropdown
-    id: mc-ver
+    id: mc-ver-java
     attributes:
       label: ⛏️ Minecraft Version?
       options:
@@ -116,8 +116,8 @@ body:
         - 1.21.4
         - Older (you dind't have to use this option usually)
     validations:
-      required: true
-      
+    required: true
+ 
  - type: dropdown
     id: fabric-ver
     attributes:
