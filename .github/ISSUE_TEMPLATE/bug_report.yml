@@ -1,5 +1,5 @@
 name: "🐛 Bug Report"
-description: Something is broken? Help us fix it!
+description: Is something broken? Help us fix it!
 title: "[Bug]: "
 labels: ["bug", "triage"]
 body:
@@ -16,13 +16,13 @@ body:
       options:
         - label: I am using the latest version of the mod.
           required: true
-        - label: I checked for duplicate issue.
+        - label: I checked for duplicate issues.
           required: true
 
   - type: dropdown
     id: component
     attributes:
-      label: 📍 Where did you think is the bug?
+      label: 📍 Where do you think the bug is?
       description: Select the area of the app.
       options:
         - 📃📦🔝 Mod Menu Updater Code
@@ -37,18 +37,18 @@ body:
     attributes:
       label: 📉 How often does it happen?
       options:
-        - 🔴 Sempre (100%)
-        - 🟠 Spesso (> 50%)
-        - 🟡 A volte (< 50%)
-        - 🟢 Raramente (Once or twice)
+        - 🔴 Always (100%)
+        - 🟠 Often (> 50%)
+        - 🟡 Sometimes (< 50%)
+        - 🟢 Rarely (Once or twice)
     validations:
       required: true
 
   - type: textarea
     id: reproduce-steps
     attributes:
-      label: 🔄 Steps before incountring the bug
-      description: clear steps lead to a faster fix!
+      label: 🔄 Steps to reproduce the bug
+      description: Clear steps lead to a faster fix!
       placeholder: |
         1. Go to ...
         2. Tap on ...
@@ -67,7 +67,7 @@ body:
       description: What happened vs. what should have happened.
       placeholder: |
         Expected: Open Minecraft and enjoy
-        Actual: Open Minecraft and it crash
+        Actual: Open Minecraft and it crashes
     validations:
       required: true
 
@@ -78,11 +78,11 @@ body:
   - type: dropdown
     id: os-type
     attributes:
-      label: 💿 What Operative System are tou using?
+      label: 💿 What Operating System are you using?
       options:
         - Windows
         - MacOS
-        - Other (please specify it at the clarifications sector)
+        - Other (please specify in the clarifications section)
     validations:
       required: true
       
@@ -91,18 +91,18 @@ body:
     attributes:
       label: 🪟 Windows Version?
       options:
-        - I don't use windows
+        - I don't use Windows
         - Windows 11
         - Windows 10
         - Windows 8 / 8.1
         - Windows 7
         - Windows Vista
         - Windows XP
-        - Windows LEGACY VERSION
+        - Windows Legacy Version
     validations:
       required: true
- 
- - type: dropdown
+
+  - type: dropdown
     id: mc-ver-java
     attributes:
       label: ⛏️ Minecraft Version?
@@ -114,14 +114,14 @@ body:
         - 1.21.11
         - 1.21.10
         - 1.21.4
-        - Older (you dind't have to use this option usually)
+        - Older (you usually shouldn't need to use this option)
     validations:
-    required: true
- 
- - type: dropdown
+      required: true
+
+  - type: dropdown
     id: fabric-ver
     attributes:
-      label: :paper: Fabric Loader Version?
+      label: 📜 Fabric Loader Version?
       options:
         - 0.19.3
         - 0.19.2
@@ -206,14 +206,14 @@ body:
         - 0.12.2
         - 0.12.1
         - 0.12.0
-        - Older (you dind't have to use this option usually)
+        - Older (you usually shouldn't need to use this option)
     validations:
       required: true
       
   - type: input
     id: mod-version
     attributes:
-      label: 📦 mod Version
+      label: 📦 Mod Version
       placeholder: e.g. 1.1.9
     validations:
       required: true
@@ -222,5 +222,5 @@ body:
     id: clarifications
     attributes:
       label: 📄 Clarifications / Logs / Screenshots
-      description: Write clarifications, Paste logs or drag & drop screenshots here.
+      description: Write clarifications, paste logs, or drag & drop screenshots here.
       render: shell
