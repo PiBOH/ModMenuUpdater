@@ -119,9 +119,9 @@ body:
       required: true
       
  - type: dropdown
-    id: mc-ver
+    id: fabric-ver
     attributes:
-      label: ⛏️ Minecraft Version?
+      label: :paper: Fabric Loader Version?
       options:
         - 0.19.3
         - 0.19.2
